@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 2.0;
+    background-color: white;
+      scroll-behavior:smooth;
+  }
+
+header {
+    background-color: darkred;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    border: blue solid 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+nav a:hover {
+    color: yellow;
+    text-decoration:underline;
+}
+nav li {
+    margin-right: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration:none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    display: grid;
+   grid-template-columns:auto;
+}
+
+.header-content {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(246, 179, 179);
+ 
+    height: 110px;
+    color: black;
+   padding-top: 10px;
+    border: rgb(55, 21, 204) dotted 2px;
+    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-content p {
+    font-size: 18px;
+    padding: 0;
+}
+
+section {
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid blue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+
+}
+
+#about {
+    grid-row: 1;
+    box-shadow: 0 0 10px rgba(239, 127, 203, 0.8);
+ 
+    
+}
+
+#about:hover{
+    background-color: lightgoldenrodyellow;
+}
+
+#about p{
+    padding-right: 40px;
+}
+
+.pro-pic{
+    padding-left: 280px;
+     height: 45vh;
+     display:flex;
+     flex-direction:column;
+     align-items: center;
+     justify-content: space-between;
+     padding-bottom: 20px;
+   }
+
+   .pro-head{
+       padding: 5px;
+       align-items: center;
+       height: 40vh;
+       display:flex;
+       flex-direction:row;
+   
+       justify-content: space-between;
+     
+   }
+
+   .pro-p{
+       text-align: left;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       margin-left: 20px;
+       
+   }
+
+#skills{
+    grid-row: 2;
+    background-color: lightcyan;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    width: 95vw;
+}
+
+#projects {
+    /*founded background color in browser */
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      grid-row: 3;
+}
+
+#projects h2 {
+    color: white;
+}
+
+.project {  
+    text-align: center;
+    background-color: white;
+    border: 2px solid red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.project:hover{
+    background-color: rgb(226, 246, 138);
+    box-shadow: 0 0 30px rgb(253, 251, 251);
+    border: 2px solid black;
+
+}
+
+.project img {
+    width: 350px;
+    height: 300px;
+    object-fit: fill;
+    padding: 30px;
+   padding-top: 40px;
+}
+
+.project h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.project p {
+    font-size: 14px;
+    margin-bottom: 55px;
+    text-align: center;
+   
+}
+
+#contact {
+    grid-row: 4;
+    text-align: center;
+    font-weight: 20;
+    background-color: white;
+    padding: 0;
+}
+
+.contact:hover{
+    background-color:  rgb(236, 192, 98);
+    box-shadow: 0 0 20px rgba(252, 251, 251, 0.8);
+}
+
+.contact button{
+    width: 80px;
+    padding: 5px 20px;
+    margin: 10px;
+    border: 2px solid maroon;
+    color: white;
+    background-color: lightseagreen
+}
+
+.contact button:hover{
+    border: 2px solid white;
+    color: white;
+    background-color: rgb(6, 2, 40)
+}
+
+/* adding transition effects*/
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+#nav a{
+    transition-delay: 1s;
+}
+
+#about {
+    transition-delay: 0.5s;
+}
+
+#skills {
+    transition-delay: 1s;
+}
+
+#projects {
+    transition-delay: 1s;
+}
+
+#contact {
+    transition-delay: 1s;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
